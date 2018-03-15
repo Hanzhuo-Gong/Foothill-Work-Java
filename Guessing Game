@@ -32,3 +32,10 @@ public class Assignment_5 {
 	}
 
 }
+
+/*---------------------------------------output------------------------------------------
+Please guess the secret number between 1 to 10: 2
+Sorry, that's not the right number
+Please guess the secret number between 1 to 10: 4
+Congratulation! You got the secret number! 
+*/
