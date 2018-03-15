@@ -1,0 +1,32 @@
+/**
+ * This is a program that calculates the BMI
+ * For the user
+ * CS 049  Hanzhuo Gong
+ */
+import java.util.Scanner;
+public class BodyMassIndex {
+
+	public static void main(String[] args) {
+		Scanner stdin = new Scanner( System.in );
+		
+		/* Set up variables */
+	     String userName;
+	     double userHeight, userWeight, BMI;
+		
+	     /* Let user enter their name, height and weight.*/
+		 System.out.print("Hello there, I can help you to calculate "
+		                 +"your BMI. What is your name? ");
+		 userName=stdin.nextLine();
+		 System.out.print("Hello "+userName+", what is your height(cm)? ");
+		 userHeight=stdin.nextDouble();
+		 System.out.print("Thank you, what is your weight(kg)? ");
+		 userWeight=stdin.nextDouble();
+		 
+	     BMI= (userWeight/((userHeight/100)*(userHeight/100)));
+	     
+	    /* Output */
+	     System.out.println(userName+", your BMI is "+BMI);
+	     stdin.close();
+	}
+
+}
