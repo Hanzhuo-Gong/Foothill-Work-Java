@@ -1,0 +1,63 @@
+/*The program spelling digits
+ * CS 049
+ * Hanzhuo Gong
+ */
+import java.util.Scanner;
+public class Assignment_4 {
+
+	public static void main(String[] args) {
+        Scanner userInput = new Scanner (System.in);
+		
+		/*Set up variable*/
+        int userNum, positiveNum, outRangeN;
+        positiveNum=0;
+        outRangeN=-10;
+        
+        /*Display message*/
+        System.out.print("Please input a number between -9 to 9,");
+    	System.out.println(" I will spell out the digits for you");
+    	userNum=userInput.nextInt();
+    	
+    	/*Check the user input */
+        if (userNum < positiveNum && userNum > outRangeN) {
+    			System.out.print("Negative ");
+    			userNum=-userNum;
+    		}
+    		switch (userNum){
+    		   case 0:
+    			   System.out.println("Zero");
+    			   break;
+    		   case 1:
+    			   System.out.println("One");
+    			   break;
+    		   case 2:
+    			   System.out.println("Two");
+    			   break;
+    		   case 3:
+    			   System.out.println("Three");
+    			   break;
+    		   case 4:
+    			   System.out.println("Four");
+    			   break;
+    		   case 5:
+    			   System.out.println("Five");
+    			   break;
+    		   case 6:
+    			   System.out.println("Six");
+    			   break;
+    		   case 7:
+    			   System.out.println("Seven");
+    			   break;
+    		   case 8:
+    			   System.out.println("Eight");
+    			   break;
+    		   case 9:
+    			   System.out.println("Night");
+    			   break;
+    		   default:
+    			   System.out.println("Error number, I quit");
+    			   System.exit(1);
+    		}
+    	userInput.close();
+	}
+}
