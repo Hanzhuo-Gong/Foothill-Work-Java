@@ -1,0 +1,10 @@
+/**
+ * This is a program to display the message
+ * "Hello World!"
+ * CS F049    Hanzhuo Gong
+ */
+class Main {  //A Java begins with a Main
+   public static void main(String args[]) {  
+        System.out.println("Hello World!"); //make the system print out "Hello World!"
+   }
+}
