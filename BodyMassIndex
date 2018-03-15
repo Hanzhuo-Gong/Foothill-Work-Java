@@ -24,3 +24,7 @@ public class BodyMassIndex {
 	}
 
 }
+
+/*---------------------------------output-------------------------------------
+The BMI value for a person with height 168.0 cm and weight 68.0 kg is 24.092970521541954 
+*/
