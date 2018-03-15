@@ -1,0 +1,429 @@
+/*This program let user guess the secret number
+ * CS 49
+ * Hanzhuo Gong
+ */
+import java.util.Scanner;
+public class Assignment_5 {
+
+	public static void main(String[] args) {
+		Scanner userInput =new Scanner (System.in);
+		
+		/*Set up variable*/
+		int secretNum, inputNum;
+		boolean rightNum;
+		
+		rightNum=false;
+		secretNum=4;
+		
+		/*set up loop for user guess the number*/
+		while(!rightNum) {
+			System.out.print("Please guess the secret number between 1 to 10: ");
+			inputNum=userInput.nextInt();
+			if (inputNum == secretNum) {
+				System.out.println("Congratulation! You got the secret number!");
+				rightNum=true;
+			}
+			else {
+				System.out.println("Sorry, that's not the right number");
+				continue;
+			}
+		}
+		userInput.close();
+	}
+
+}
+
+/**This is the userfulRoutines method
+ * spell out the number
+ * */
+public class UsefulRoutines {
+	public static void checkNegative(int checkNum) {
+		int positiveNum;
+		positiveNum=0;
+		
+		//Check the if the number is negative
+		if (checkNum < positiveNum) {
+		   System.out.print("Negative ");
+		}
+
+	}
+	public static void spellDigit(int num) {
+		
+		checkNegative(num);
+		num= Math.abs(num);
+		switch (num) {
+		case 0:
+			System.out.println("Zero");
+			break;
+		case 1:
+			System.out.println("One");
+			break;
+		case 2:
+			System.out.println("Two");
+			break;
+		case 3:
+			System.out.println("Three");
+			break;
+		case 4:
+			System.out.println("Four");
+			break;
+		case 5:
+			System.out.println("Five");
+			break;
+		case 6:
+			System.out.println("Six");
+			break;
+		case 7:
+			System.out.println("Seven");
+			break;
+		case 8:
+			System.out.println("Eight");
+			break;
+		case 9:
+			System.out.println("Nine");
+			break;
+			
+		}
+	}
+	
+	public static void spellNumber(int number) {
+		int numof2X, numof3X, numof4X, numof5X, numof6X, numof7X,
+		    numof8X, numof9X;
+		
+		numof2X=20;
+		numof3X=30;
+		numof4X=40;
+		numof5X=50;
+		numof6X=60;
+		numof7X=70;
+		numof8X=80;
+		numof9X=90;
+		
+		checkNegative(number);
+		number=Math.abs(number);
+		//If the number is -9 to 9
+		spellDigit(number);
+		//If the number is 10 to 20;
+		switch (number) {
+		case 10:
+			System.out.println("Ten");
+			break;
+		case 11:
+			System.out.println("Eleven");
+			break;
+		case 12:
+			System.out.println("Twelve");
+			break;
+		case 13:
+			System.out.println("Thirteen");
+			break;
+		case 14:
+			System.out.println("Fourteen");
+			break;
+		case 15:
+			System.out.println("Fifteen");
+			break;
+		case 16:
+			System.out.println("Sixteen");
+			break;
+		case 17:
+			System.out.println("Seventeen");
+			break;
+		case 18:
+			System.out.println("Eighteen");
+			break;
+		case 19:
+			System.out.println("Nineteen");
+			break;
+		}
+		//If the number is 2X
+		if (number == numof2X)
+			System.out.println("Twenty");
+		else if (number > numof2X && number < numof3X) {
+			System.out.print("Twenty ");
+			number-=numof2X;
+		    spellDigit(number);
+		}
+		//If the number is 3X
+		else if (number == numof3X)
+			System.out.println("Thirty");
+		else if (number >numof3X && number < numof4X) {
+			System.out.print("Thirty ");
+			number-= numof3X;
+			spellDigit(number);
+		}
+		//If the number is 4X
+		else if (number == numof4X)
+			System.out.println("Forty");
+		else if (number > numof4X && number < numof5X) {
+			System.out.print("Forty ");
+			number-=numof4X;
+			spellDigit(number);	
+		}
+		//If the number is 5X
+		else if (number == numof5X)
+			System.out.println("Fifty");
+		else if (number > numof5X && number < numof6X) {
+			System.out.print("Fifty ");
+			number-=numof5X;
+			spellDigit(number);
+		}
+		//If the number is 6X
+		else if (number == numof6X)
+			System.out.println("Sixty");
+		else if (number > numof6X && number < numof7X) {
+			System.out.print("Sixty ");
+			number -=numof6X;
+			spellDigit(number);
+		}
+		//If the number is 7X
+		else if (number == numof7X)
+			System.out.println("Seventy");
+		else if (number > numof7X && number < numof8X) {
+			System.out.print("Seventy ");
+			number-=numof7X;
+			spellDigit(number);
+		}
+		//If the number is 8X
+		else if (number == numof8X)
+			System.out.println("Eighty");
+		else if (number > numof8X && number < numof9X) {
+			System.out.print("Eighty ");
+			number -=numof8X;
+			spellDigit(number);
+		}
+		//If the number is 9X
+		else if (number == numof9X)
+			System.out.println("Ninety");
+		else if (number > numof9X) {
+			System.out.print("Ninety ");
+			number -=numof9X;
+			spellDigit(number);
+		}
+	}
+
+
+}
+
+/*-------------------------output----------------------------------
+Part1: 
+Negative Nine
+Negative Eight
+Negative Seven
+Negative Six
+Negative Five
+Negative Four
+Negative Three
+Negative Two
+Negative One
+Zero
+One
+Two
+Three
+Four
+Five
+Six
+Seven
+Eight
+Nine
+Part2: 
+Negative Ninety Nine
+Negative Ninety Eight
+Negative Ninety Seven
+Negative Ninety Six
+Negative Ninety Five
+Negative Ninety Four
+Negative Ninety Three
+Negative Ninety Two
+Negative Ninety One
+Negative Ninety
+Negative Eighty Nine
+Negative Eighty Eight
+Negative Eighty Seven
+Negative Eighty Six
+Negative Eighty Five
+Negative Eighty Four
+Negative Eighty Three
+Negative Eighty Two
+Negative Eighty One
+Negative Eighty
+Negative Seventy Nine
+Negative Seventy Eight
+Negative Seventy Seven
+Negative Seventy Six
+Negative Seventy Five
+Negative Seventy Four
+Negative Seventy Three
+Negative Seventy Two
+Negative Seventy One
+Negative Seventy
+Negative Sixty Nine
+Negative Sixty Eight
+Negative Sixty Seven
+Negative Sixty Six
+Negative Sixty Five
+Negative Sixty Four
+Negative Sixty Three
+Negative Sixty Two
+Negative Sixty One
+Negative Sixty
+Negative Fifty Nine
+Negative Fifty Eight
+Negative Fifty Seven
+Negative Fifty Six
+Negative Fifty Five
+Negative Fifty Four
+Negative Fifty Three
+Negative Fifty Two
+Negative Fifty One
+Negative Fifty
+Negative Forty Nine
+Negative Forty Eight
+Negative Forty Seven
+Negative Forty Six
+Negative Forty Five
+Negative Forty Four
+Negative Forty Three
+Negative Forty Two
+Negative Forty One
+Negative Forty
+Negative Thirty Nine
+Negative Thirty Eight
+Negative Thirty Seven
+Negative Thirty Six
+Negative Thirty Five
+Negative Thirty Four
+Negative Thirty Three
+Negative Thirty Two
+Negative Thirty One
+Negative Thirty
+Negative Twenty Nine
+Negative Twenty Eight
+Negative Twenty Seven
+Negative Twenty Six
+Negative Twenty Five
+Negative Twenty Four
+Negative Twenty Three
+Negative Twenty Two
+Negative Twenty One
+Negative Twenty
+Negative Nineteen
+Negative Eighteen
+Negative Seventeen
+Negative Sixteen
+Negative Fifteen
+Negative Fourteen
+Negative Thirteen
+Negative Twelve
+Negative Eleven
+Negative Ten
+Negative Nine
+Negative Eight
+Negative Seven
+Negative Six
+Negative Five
+Negative Four
+Negative Three
+Negative Two
+Negative One
+Zero
+One
+Two
+Three
+Four
+Five
+Six
+Seven
+Eight
+Nine
+Ten
+Eleven
+Twelve
+Thirteen
+Fourteen
+Fifteen
+Sixteen
+Seventeen
+Eighteen
+Nineteen
+Twenty
+Twenty One
+Twenty Two
+Twenty Three
+Twenty Four
+Twenty Five
+Twenty Six
+Twenty Seven
+Twenty Eight
+Twenty Nine
+Thirty
+Thirty One
+Thirty Two
+Thirty Three
+Thirty Four
+Thirty Five
+Thirty Six
+Thirty Seven
+Thirty Eight
+Thirty Nine
+Forty
+Forty One
+Forty Two
+Forty Three
+Forty Four
+Forty Five
+Forty Six
+Forty Seven
+Forty Eight
+Forty Nine
+Fifty
+Fifty One
+Fifty Two
+Fifty Three
+Fifty Four
+Fifty Five
+Fifty Six
+Fifty Seven
+Fifty Eight
+Fifty Nine
+Sixty
+Sixty One
+Sixty Two
+Sixty Three
+Sixty Four
+Sixty Five
+Sixty Six
+Sixty Seven
+Sixty Eight
+Sixty Nine
+Seventy
+Seventy One
+Seventy Two
+Seventy Three
+Seventy Four
+Seventy Five
+Seventy Six
+Seventy Seven
+Seventy Eight
+Seventy Nine
+Eighty
+Eighty One
+Eighty Two
+Eighty Three
+Eighty Four
+Eighty Five
+Eighty Six
+Eighty Seven
+Eighty Eight
+Eighty Nine
+Ninety
+Ninety One
+Ninety Two
+Ninety Three
+Ninety Four
+Ninety Five
+Ninety Six
+Ninety Seven
+Ninety Eight
+Ninety Nine 
+*/
