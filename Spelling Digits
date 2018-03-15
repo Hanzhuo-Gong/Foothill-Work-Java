@@ -1,3 +1,4 @@
+
 /*The program spelling digits
  * CS 049
  * Hanzhuo Gong
@@ -61,3 +62,15 @@ public class Assignment_4 {
     	userInput.close();
 	}
 }
+
+/*---------------------------------output-----------------------------
+Please input a number between -9 to 9, I will spell out the digits for you
+-2
+Negative Two
+Please input a number between -9 to 9, I will spell out the digits for you
+8
+Eight
+Please input a number between -9 to 9, I will spell out the digits for you
+12
+Error number, I quit 
+*/
