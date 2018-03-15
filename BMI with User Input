@@ -30,3 +30,10 @@ public class BodyMassIndex {
 	}
 
 }
+
+/*------------------------------output--------------------------------
+Hello there, I can help you to calculate your BMI. What is your name? Hanzhuo Gong
+Hello Hanzhuo Gong, what is your height(cm)? 172
+Thank you, what is your weight(kg)? 64
+Hanzhuo Gong, your BMI is 21.63331530557058 
+*/
