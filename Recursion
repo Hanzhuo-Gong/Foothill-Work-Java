@@ -1,0 +1,40 @@
+/**
+ * This program will display the factorial for a number
+ * CS 49
+ * Hanzhuo Gong
+ */
+public class TestFactorial {
+
+	public static void main(String[] args) {
+		System.out.println("8!= " + UserfulRoutines.factorial(8));
+		System.out.println("11!= " + UserfulRoutines.factorial(11));
+		System.out.println("0!= " + UserfulRoutines.factorial(0));
+		System.out.println("7!= " + UserfulRoutines.factorial(7));
+
+	}
+
+}
+
+/**
+ * Method for calculate the factorial number
+ * CS 49
+ * Hanzhuo Gong
+ */
+public class UserfulRoutines {
+	public static long factorial(int num) {
+		if (num < 0)
+			return 0;
+		if (num == 0)
+			return 1;
+		return factorial(num-1)*num;
+
+	}
+
+}
+
+/*------------------------------output---------------------------
+8!= 40320
+11!= 39916800
+0!= 1
+7!= 5040 
+*/
